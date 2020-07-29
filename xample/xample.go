@@ -20,7 +20,7 @@ func main() {
 	exampleTitle := os.Args[1]
 
 	// creating directory
-	if err := os.Mkdir(fmt.Sprintf("examples/%s", exampleTitle), 0755); err != nil {
+	if err := os.Mkdir(filepath.Join("examples", exampleTitle), 0755); err != nil {
 		fmt.Printf("Could not create directory titled 'examples/%s'\n", exampleTitle)
 		fmt.Println(err.Error())
 		os.Exit(-1)
